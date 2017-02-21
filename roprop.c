@@ -62,7 +62,7 @@ int main(int argc, char **argv) {
 		*((unsigned long *)(buffer + addr - maps)) = test;
 	}
 	// only appears once
-	ro = memmem(buffer, mape - maps, "ro.", 4);
+	ro = memmem(buffer, mape - maps, "ro.", 3);
 	if (ro) {
 		printf("Patching init.\n");
 		fake = 0;
